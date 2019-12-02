@@ -11,14 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('user/list', 'UserController@getAll');
-Route::post('user/message/create', 'MessageController@create');
-Route::post('user/message', 'MessageController@getMessagesFromUser');
